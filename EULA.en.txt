@@ -1,0 +1,29 @@
+CBCOJ Software End User License Agreement (English Version)
+
+Before downloading, installing, or using CBCOJ software (hereinafter referred to as "the Software"), please read this agreement carefully. Once you use this software, you agree to be bound by all terms and conditions of this agreement. If you do not agree to this agreement, please immediately stop using and delete this software.
+
+1. Intellectual Property Declaration
+This software and all related rights (including but not limited to copyright and trademark rights) are exclusively owned by the CBCOJ development team. This software is protected by laws, regulations, and international treaties such as the Copyright Law of the People's Republic of China.
+
+2. Grant of License
+The CBCOJ development team grants you a free, non transferable, non exclusive license to download, copy, distribute, and distribute original copies of this software solely for personal learning, research, or non-commercial purposes. All copies must fully include the original copyright statement, trademark statement, and this license agreement.
+
+3. Restrictive behavior
+When using this license, you promise not to engage in the following behaviors:
+*Commercial use: Without written authorization from the CBCOJ development team, no individual or entity may use this software for any commercial purpose, including but not limited to sales, rentals, bundled sales, as part of commercial services, or for activities that directly or indirectly generate revenue.
+*Reverse engineering: It is not allowed to reverse engineer, decompile, disassemble, or otherwise attempt to obtain the source code or internal logic of this software.
+*Modification and interpretation: It is not allowed to modify, translate, adapt, split, or create derivative works of this software.
+*Remove identification: Do not remove, obscure, or tamper with any copyright, trademark, or other proprietary rights statements contained in this software and its copies.
+
+4. Disclaimer
+This software is provided "as is" and, to the maximum extent permitted by applicable law, the CBCOJ development team does not provide any form of express or implied warranty, including but not limited to warranties of merchantability, fitness for a particular purpose, and non infringement. You shall bear all risks and consequences that may arise from using this software, such as data loss, system instability, etc.
+
+5. Limitation of Liability
+Under no circumstances shall the CBCOJ development team be liable for any direct, indirect, incidental, special or consequential damages (including but not limited to loss of profits, data loss, business interruption) arising from the use or inability to use this software, whether such liability is based on contract, tort (including negligence) or other reasons.
+
+6. Termination of the Agreement
+If you violate any terms of this agreement, your license to use this software will automatically terminate without further notice. After termination, you must immediately destroy all holdings of this software and its copies.
+
+7. Other
+*This agreement shall be governed by and interpreted in accordance with the laws of the People's Republic of China.
+*If any provision of this agreement is deemed invalid, it shall not affect the continued validity of other provisions.
