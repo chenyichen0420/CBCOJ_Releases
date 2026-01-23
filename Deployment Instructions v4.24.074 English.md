@@ -11,11 +11,11 @@
 
 Download binary files from Release v4.24.074. Please ensure that the executable file downloaded is for the corresponding platform.
 
-Extract backend.zip to a folder, and frontend.zip to another.
+Extract backend.rar to a folder, and frontend.rar to another.
 
 ## Step 2: Backend settings
 
-Raw content structure of zip:
+Raw content structure of rar:
 
 ```
 │  account.ini
@@ -74,3 +74,64 @@ All test data should be put inside this folder. If special judge is needed, put 
 - The following lines contain the configuration of each testcases, including input/out file name (`*.in/out`), time limit (ms), and memory limit (MiB).
 
 That's all of backend configurations.
+
+## Step 3: Frontend settings
+
+Raw content structure of rar:
+
+```
+│  config.json
+│  server.exe
+│
+├─admin
+│  │  ...
+│  │
+│  └─assets
+│          ...
+│
+└─public
+    │  ...
+    │
+    ├─api
+    ├─files
+    ├─login
+    │      ...
+    │
+    ├─problem
+    │      aplusb.html
+    │
+    ├─records
+    ├─submit
+    │      ...
+    │
+    └─templates
+       ...
+```
+
+Here, `...` indicats the omission of some irrelevant things.
+
+The `config.json` follows the following setting format:
+
+- Number "port" refers to the port number of the user website.
+- Number "adport" refers to the port number of the admin website.
+- String "ip" refers to the IPv4 number of the judger machine.
+- Array "adaccount" refers to the accounts used to login to the admin website.
+- Elements in Array "adaccount" should take the form of `{"username":"","password":""}`, with each represents a pair of username and password used to login.
+- For elements in Array "adaccount", string username refers to the username of an account.
+- For elements in Array "adaccount", string password refers to the password of an account.
+
+In folder `public/files`, you can store anything you want, and it can be accessed through the following website: `yourwebsite/files/filename`.
+
+In folder `public/problem`, you can config the statement of the problems. The file name (without file extension) must be the same as the problem name.
+
+That's all of frontend configurations.
+
+## Step 4: Start service
+
+Start backend first, and then the frontend.
+
+The website is now available on `localhost:port`, here "port" refers to the configured value of "port" in `config.json` in frontend folder.
+
+## Function
+
+To be updated.
