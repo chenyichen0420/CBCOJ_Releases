@@ -131,20 +131,26 @@
 登录、查看题目、提交代码、获取评测结果。
 
 **登录**：请访问 `yourwebsite/login` 页面，根据提示填写用户名和密码即可登录。
-（登录界面示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-paswd.png）
-（登录成功示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-success.png）
+
+（登录界面示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-paswd.png ）
+
+（登录成功示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-success.png ）
 
 **查看题目列表**：访问 `yourwebsite/problem?page=...` 页面可以获取题目列表。
-（题目列表示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Problemlist.png）
+
+（题目列表示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Problemlist.png ）
 
 **查看题目详情**：点击题目列表中的任一题目，即可查看该题目的详细描述。
-（题目详情页示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Viewproblem.png）
+
+（题目详情页示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Viewproblem.png ）
 
 **提交代码**：如果您对某题有了解决方案，可以点击题目下方的提交按钮，并根据提示填写代码和选择语言。
-（提交界面示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Submit-code.png）
+
+（提交界面示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Submit-code.png ）
 
 **查看结果**：点击提交按钮后，请等待评测。评测完成后，网页将自动跳转到结果页面。
-（评测结果示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Result.png）
+
+（评测结果示意图：https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Result.png ）
 
 ### 附注
 
