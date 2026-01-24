@@ -1,0 +1,188 @@
+**Warning: This version is no longer maintained. There is no guarantee that it is free of issues or security vulnerabilities.**
+
+### Supported Platforms
+
+| Executable Group | Windows | Linux |
+| :--- | :--- | :--- |
+| Backend | Supported | Code exists, but lacks comprehensive testing and is not a maintained version. Not provided. |
+| Frontend | Supported | Not Supported |
+
+## Step 1: Download
+
+Download the binaries from Release v5.36.092. Ensure the downloaded executables match the corresponding platform.
+
+Extract `backend.rar` into one folder and `frontend.rar` into another folder.
+
+## Step 2: Backend Configuration
+
+The original structure after extracting the backend archive is as follows:
+
+```
+│  account.ini
+│  basic_setting.ini
+│  CBCOJ_Server.exe
+│  loge.txt
+│  logi.txt
+│  logw.txt
+│  rc.txt
+│
+├─rec
+├─work
+├─work1
+├─work2
+└─pb
+   │  setting.ini
+   │
+   └─aplusb
+           setting.txt
+           spj.cpp
+           spj.exe
+           test1.in
+           test1.out
+           test2.in
+           test2.out
+```
+
+`account.ini` follows this format:
+*   First line: Number of accounts (an integer $n$).
+*   Next $n$ lines: Each line stores information for one account, in the order: username and password, separated by a space.
+*   Compared to the previous version, you no longer need to manually configure user IDs. User IDs are assigned starting from $1$ according to the configuration order.
+
+`basic_setting.ini` follows this format:
+*   First line: Number of judging threads (an integer $n$).
+*   Second line: Path to the folder storing source code to be judged.
+*   Next $n$ lines: Working folder path for each judging thread (the number of lines matches the number of judging threads).
+*   Next line: Path to the Problem Base folder.
+*   Next line: Path to the g++ compiler.
+*   Next line: Path to the folder storing all judging results.
+*   Compared to the previous version, the order of the last two lines has been swapped.
+
+`logi.txt`, `loge.txt`, `logw.txt` are log files generated when `CBCOJ_Server.exe` runs. They can be safely deleted when `CBCOJ_Server.exe` is not running.
+
+`rc.txt` is the file storing submission IDs. Do not delete or modify this file directly!
+
+`pb/setting.ini` stores problem configurations, where `pb` is the Problem Base folder configured in `basic_setting.ini`. Its format is as follows:
+*   First line: Number of problems (an integer $n$).
+*   Next $n$ lines: Each line contains the name of one problem.
+
+Each problem's configuration must be saved in a subfolder under the `pb` folder. The subfolder name must match the problem name configured in `pb/setting.ini`.
+
+All test data should be placed inside this problem folder. If Special Judge (SPJ) is required, place the SPJ executable(s) in this directory as well. The format of `setting.txt` is as follows:
+*   First line: Contains the input/output filename (without extension, corresponding input/output files are `*.in/out`, but programs should not read/write files; the judging end will redirect I/O streams), the SPJ executable filename, and the number of subtasks $n$, separated by spaces.
+    *   If SPJ is not needed, use `fc` instead of the executable filename.
+*   Next, there are $n$ sets of subtask configuration items, following this format:
+    *   The first line inputs two integers $m,k$, representing the number of test cases in this subtask and the score for passing this subtask. Then input an integer $x$ and $x$ integers $a_i$, indicating that the current subtask depends on subtasks $a_i$. $a_i$ must be **less than** the current subtask number. Subtasks are numbered starting from $0$. All numbers are separated by spaces.
+    *   Next $m$ lines, each line contains the test case filename (without extension, corresponding input/output files stored as *.in/out), time limit (ms), and memory limit (MiB), separated by spaces.
+
+This completes the backend configuration.
+
+## Step 3: Frontend Configuration
+
+The original structure after extracting the frontend archive is as follows:
+
+```
+│  config.json
+│  server.exe
+│
+├─admin
+│  │  ...
+│  │
+│  └─assets
+│          ...
+│
+└─public
+    │  ...
+    │
+    ├─api
+    ├─files
+    ├─login
+    │      ...
+    │
+    ├─problem
+    │      aplusb.html
+    │
+    ├─records
+    ├─submit
+    │      ...
+    │
+    └─templates
+       ...
+```
+
+Where `...` indicates omitted files not directly relevant.
+
+`config.json` follows this format:
+*   `port` (Number): The port number for the user website.
+*   `adport` (Number): The port number for the administrator website.
+*   `ip` (String): The IPv4 address of the judging server (backend).
+*   `adaccount` (Array): List of accounts for logging into the administrator website.
+*   Each element in the `adaccount` array should be an object of the form `{"username":"", "password":""}`, representing a username-password pair.
+    *   `username` (String): The account's username.
+    *   `password` (String): The account's password.
+
+In the `public/files` folder, you can store any files you wish users to access, reachable via the URL `yourwebsite/files/filename`.
+
+In the `public/problem` folder, you configure the problem description pages. The name of the HTML file (without extension) must match the problem name.
+
+This completes the frontend configuration.
+
+## Step 4: Start the Service
+
+First, start the backend (`CBCOJ_Server.exe`), then start the frontend (`server.exe`).
+
+The website will be available at `localhost:port`, where "port" is the "port" value configured in the frontend's `config.json`.
+
+## System Features
+
+Login, view problems, submit code, and obtain judging results.
+
+**Login**: Please visit the `yourwebsite/login` page and fill in your username and password as prompted.
+
+(Login interface screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-paswd.png )
+
+(Login success screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-success.png )
+
+**View Problem List**: Access the `yourwebsite/problem?page=...` page to get the problem list.
+
+(Problem list screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Problemlist.png )
+
+**View Problem Details**: Click on any problem in the list to view its detailed description.
+
+(Problem details page screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Viewproblem.png )
+
+**Submit Code**: If you have a solution for a problem, click the submit button below the problem and fill in your code and select the language as prompted.
+
+(Submission interface screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Submit-code.png )
+
+**View Result**: After clicking the submit button, wait for the judging to complete. The webpage will automatically jump to the result page once judging is done.
+
+(Judging result screenshot: https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Result_v5.png )
+
+### Note
+
+Actually, the provided archives contain a pre-configured, ready-to-use environment. All screenshots above are from running the default configured environment.
+
+The submission interface screenshot includes the correct answer code for that problem.
+
+### About CBCOJ's SPJ Support
+
+CBCOJ does not support `testlib.h`, which may seem unusual and perhaps inconvenient, but there are design considerations. The system calls your SPJ executable via the command line in the format: `spj.exe input_file_path user_output_file_path answer_file_path`.
+
+The following is an example SPJ program for the problem `aplusb` (i.e., the content of `spj.cpp` in the backend archive):
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(int argc, char** argv){
+    ifstream in(argv[1]);
+    ifstream out(argv[2]);
+    ifstream ans(argv[3]);
+    int av, ov;
+    ans >> av;
+    out >> ov;
+    if(ov == av * 2) return 0;
+    return 1;
+}
+```
+
+If your SPJ program determines the user's output is correct, please return 0 (since runtime errors typically do not return 0, this can indicate issues like incorrect output format).
