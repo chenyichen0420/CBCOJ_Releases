@@ -186,3 +186,9 @@ int main(int argc, char** argv){
 ```
 
 If your SPJ program determines the user's output is correct, please return 0 (since runtime errors typically do not return 0, this can indicate issues like incorrect output format).
+
+### A Mysterious Bug
+
+Sometimes, if your front-end and back-end are on the same computer and you use `127.0.0.1` as the IPv4 address of the judging machine in `config.json`, you can login and update question list normally, but you cannot obtain the judging results.
+
+This issue has only occurred in Win11 and has not been consistently reproduced. However, a feasible solution is to replace the IPv4 address of the judging machine with the IPv4 address of current machine in the local network.
