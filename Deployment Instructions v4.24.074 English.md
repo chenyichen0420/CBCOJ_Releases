@@ -134,4 +134,55 @@ The website is now available on `localhost:port`, here "port" refers to the conf
 
 ## Function
 
-To be updated.
+Login, View problems, Submit, Get judge result.
+
+When login, you need to turn to page `yourwebsite/login`, fill in the two blanks according to the instructions, and you will login successfully.
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-paswd.png)
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Login-success.png)
+
+You can get a problem list from page `yourwebsite/problem?page=...`.
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Problemlist.png)
+
+Hit one of the problem, and you can view the statement of that problem.
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Viewproblem.png)
+
+Once you had a solution to that problem, you can hit the submit button bellow, and fill in the blanks according to the instructions.
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Submit-code.png)
+
+Click submit button, and wait for a while. Once your code is judged, the webpage will automatically jump to the result page.
+
+![](https://github.com/chenyichen0420/CBCOJ_Releases/blob/main/statics/Result.png)
+
+### Note
+
+In fact, the rars includes a configured ready-to-use environment. All the above images are screenshots taken from running the default configuration environment.
+
+The screenshot of the submission interface contains the correct code for that problem.
+
+### About CBCOJ APJ support
+
+It's a bit strange, unwise, but reasonable that CBCOJ don't supports `testlib.h`. We calls your SPJ executable with cmd lines: `spj.exe inputfile_path answerfile_path outputfile_path`.
+
+Bellow is an example program of problem aplusb's SPJ(which is exactly the cpp in raw content of the backend rar):
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(int argc,char**argv){
+	ifstream in(argv[1]);
+	ifstream ans(argv[2]);
+	ifstream out(argv[3]);
+	int av,ov;
+	ans >> av;
+	out >> ov;
+	if(ov == av*2) return 0;
+	return 1;
+} 
+```
+
+If your program thinks the answer is correct, please return 0. This is because runtime error usually doesn't returns 0, which shows that the user's output is ill-formed(probably).
