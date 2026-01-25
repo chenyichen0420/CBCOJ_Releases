@@ -45,7 +45,7 @@
         <td>Record List</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Supported</td>
     </tr>
     <tr>
-        <td>Record with Code</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td>
+        <td>Record with Code</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Supported</td>
     </tr>
     <tr>
         <td rowspan="9">Frontend</td><td>Multi-backend</td><td>Unsupported</td><td>Unsupported</td><td>Supported</td><td>Supported</td><td>Supported</td>
@@ -72,6 +72,6 @@
         <td>Record List</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Supported</td>
     </tr>
     <tr>
-        <td>Record with Code</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td>
+        <td>Record with Code</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Unsupported</td><td>Supported</td>
     </tr>
 </table>
