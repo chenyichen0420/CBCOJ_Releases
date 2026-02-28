@@ -1,19 +1,5 @@
 <table>
-    <tr>
-        <th colspan="2"> Version </th><th> 9.xx.xxx </th>
-    </tr>
-    <tr>
-        <td rowspan="1"> Back-end </td><td>Linux</td><td>Supported</td>
-    </tr>
-    <tr>
-        <td rowspan="1"> Middle-end </td><td>Linux</td><td>Supported</td>
-    </tr>
-    <tr>
-        <td rowspan="1"> Front-end </td><td>Linux</td><td>Supported</td>
-    </tr>
-    <tr>
-        <td rowspan="1"> Webpage </td><td>New UI design</td><td>Supported</td>
-    </tr>
+
 </table>
 
 Bellow versions is based on an old infrastructure.
