@@ -4,19 +4,23 @@ Also, we're happy to share our structure of the OJ. If you could optimize it, we
 
 Currently, we supports:
 
+- Register
 - Login
 - Account Secure setting
+- Account Individual setting(partical)
 - Discussion
 - Chat(Private Message)
 - Submit and Record
 - Problem list
+- Problem(With MD and Katex)
 
 We'll support:
 
 - Team
-- User page/slogan/avatars/...
-- Contest
+- User page/avatars/...
+- Contest/Training
 
 We're currently working on:
 
-- Register
+- New Infrastructure Robustness
+- Safer Access Control
