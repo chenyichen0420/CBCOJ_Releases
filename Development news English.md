@@ -7,20 +7,17 @@ Currently, we supports:
 - Register
 - Login
 - Account Secure setting
-- Account Individual setting(partical)
-- Discussion
-- Chat(Private Message)
 - Submit and Record
 - Problem list
-- Problem(With MD and Katex)
+- Problem(With Markdown and Katex)
 
 We'll support:
 
-- Team
-- User page/avatars/...
-- Contest/Training
+- User page/...
+- Contest
 
 We're currently working on:
 
 - New Infrastructure Robustness
-- Safer Access Control
+- Better Access Control
+- New storage format
